@@ -60,3 +60,17 @@ body {
   background-color: #2D7A6F;
   color: white;
 }
+
+/* Cookie icon gentle bounce */
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 2.5s ease-in-out infinite;
+}

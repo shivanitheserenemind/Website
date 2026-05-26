@@ -8,7 +8,7 @@ import { Badge } from '../components/ui/badge';
 import {
   Phone, Map, Sparkles, User, Users, Heart, BookOpen,
   Star, Calendar, MapPin, Clock, Instagram, Facebook,
-  Linkedin, Mail, Send, CheckCircle, ArrowRight, Menu, X } from
+  Linkedin, Mail, Send, CheckCircle, ArrowRight, Menu, X, Cookie } from
 'lucide-react';
 import {
   coachInfo,
@@ -386,7 +386,7 @@ export const Home = () => {
       {/* Footer */}
       <footer className="bg-[#1F4E48] text-white py-12">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
+          <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div>
               <h3 className="font-serif text-2xl mb-4">Shivani Ambekar</h3>
               <p className="text-[#B5C7B0] text-sm leading-relaxed">
@@ -400,31 +400,6 @@ export const Home = () => {
                 <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
                 <li><a href="#workshops" className="hover:text-white transition-colors">Workshops</a></li>
               </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm text-[#B5C7B0]">
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Disclaimer</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Newsletter</h4>
-              <p className="text-[#B5C7B0] text-sm mb-3">Receive inspiration & updates</p>
-              <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
-                <Input
-                  type="email"
-                  placeholder="Your email"
-                  value={newsletterEmail}
-                  onChange={(e) => setNewsletterEmail(e.target.value)}
-                  required
-                  className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/50" />
-
-                <Button type="submit" variant="secondary" size="icon" className="bg-[#C9DCBE] hover:bg-[#B0CFA0]">
-                  <Mail className="h-4 w-4" />
-                </Button>
-              </form>
             </div>
           </div>
           
@@ -445,25 +420,29 @@ export const Home = () => {
                 </a>
               </div>
             </div>
-            <p className="text-[#B5C7B0] text-xs mt-4 text-center">
-              Disclaimer: Coaching is not therapy and is not a substitute for professional mental health treatment.
-            </p>
           </div>
         </div>
       </footer>
 
-      {/* Cookie Consent Banner */}
-      <div className="fixed bottom-4 right-4 max-w-sm bg-white border border-[#DCE5D0] rounded-lg shadow-lg p-4 z-50">
-        <p className="text-[#1F4E48] text-sm mb-3">
-          We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
-        </p>
-        <div className="flex gap-2">
-          <Button size="sm" className="flex-1 bg-[#8FB565] hover:bg-[#729550] text-white">
-            Accept
-          </Button>
-          <Button size="sm" variant="outline" className="flex-1 border-[#DCE5D0] text-[#1F4E48]">
-            Decline
-          </Button>
+      {/* Cookie Consent - Hover to Expand */}
+      <div className="fixed bottom-4 right-4 z-50 group">
+        {/* Collapsed Icon */}
+        <div className="w-14 h-14 bg-[#2D7A6F] rounded-full shadow-lg flex items-center justify-center cursor-pointer group-hover:opacity-0 group-hover:scale-50 transition-all duration-300 animate-bounce-slow">
+          <Cookie className="h-7 w-7 text-white" />
+        </div>
+        {/* Expanded Popup */}
+        <div className="absolute bottom-0 right-0 max-w-sm w-[22rem] bg-white border border-[#DCE5D0] rounded-lg shadow-2xl p-4 opacity-0 scale-90 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-300 origin-bottom-right">
+          <p className="text-[#1F4E48] text-sm mb-3">
+            We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
+          </p>
+          <div className="flex gap-2">
+            <Button size="sm" className="flex-1 bg-[#8FB565] hover:bg-[#729550] text-white">
+              Accept
+            </Button>
+            <Button size="sm" variant="outline" className="flex-1 border-[#DCE5D0] text-[#1F4E48]">
+              Decline
+            </Button>
+          </div>
         </div>
       </div>
     </div>);
