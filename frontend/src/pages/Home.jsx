@@ -86,7 +86,6 @@ export const Home = () => {
             <a href="#services" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">Services</a>
             <a href="#workshops" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">Workshops</a>
             <a href="#testimonials" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">Testimonials</a>
-            <a href="#blog" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">Insights</a>
             <a href="#contact" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">Contact</a>
           </nav>
           <Button onClick={scrollToContact} className="bg-[#B8886B] hover:bg-[#A07859] text-white transition-all duration-300">
@@ -318,50 +317,6 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Blog Section */}
-      <section id="blog" className="py-20 bg-[#FAF8F5]">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl text-[#6B5B4A] mb-4">
-              Insights & Inspiration
-            </h2>
-            <p className="text-[#9B8B7A] max-w-2xl mx-auto">
-              Reflections on healing, growth, and transformation
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {blogPosts.map((post) =>
-            <Card key={post.id} className="group hover:shadow-xl transition-all duration-300 border-[#E8DED0] bg-white overflow-hidden">
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                  src={post.image}
-                  alt={post.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
-
-                  <Badge className="absolute top-4 left-4 bg-white/90 text-[#6B5B4A]">
-                    {post.category}
-                  </Badge>
-                </div>
-                <CardHeader>
-                  <CardDescription className="text-[#9B8B7A] text-sm">
-                    {post.date}
-                  </CardDescription>
-                  <CardTitle className="text-[#6B5B4A] font-serif text-lg leading-snug">
-                    {post.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-[#9B8B7A] mb-4 leading-relaxed">{post.excerpt}</p>
-                  <Button variant="ghost" className="text-[#B8886B] hover:text-[#A07859] p-0">
-                    Read More <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </CardContent>
-              </Card>
-            )}
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -486,7 +441,6 @@ export const Home = () => {
                 <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
                 <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
                 <li><a href="#workshops" className="hover:text-white transition-colors">Workshops</a></li>
-                <li><a href="#blog" className="hover:text-white transition-colors">Blog</a></li>
               </ul>
             </div>
             <div>
