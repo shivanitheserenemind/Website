@@ -10,7 +10,7 @@ export const coachInfo = {
     "15+ Years of Personal Development Work",
     "100+ Workshops Facilitated"
   ],
-  image: "https://images.unsplash.com/photo-1592621385612-4d7129426394"
+  image: "https://customer-assets.emergentagent.com/job_transform-with-love/artifacts/73cc63ps_WhatsApp%20Image%202026-05-25%20at%2000.16.11.jpeg"
 };
 
 export const heroContent = {
