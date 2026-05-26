@@ -75,8 +75,11 @@ export const Home = () => {
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#E8DED0] shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div>
-            <h1 className="text-2xl font-serif font-bold text-[#6B5B4A]">Shivani Ambekar</h1>
-            <p className="text-xs text-[#9B8B7A]">Licensed Heal Your Life® Coach</p>
+            <img 
+              src="https://customer-assets.emergentagent.com/job_transform-with-love/artifacts/47cs2zxo_Serene_Mind_Logo_Final.ai__3_-removebg-preview.png" 
+              alt="Serene Mind - Peace Within"
+              className="h-24 w-auto object-contain"
+            />
           </div>
           <nav className="hidden md:flex gap-6 text-sm">
             <a href="#about" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">About</a>
