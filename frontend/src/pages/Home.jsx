@@ -5,11 +5,11 @@ import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
 import { Badge } from '../components/ui/badge';
-import { 
-  Phone, Map, Sparkles, User, Users, Heart, BookOpen, 
-  Star, Calendar, MapPin, Clock, Instagram, Facebook, 
-  Linkedin, Mail, Send, CheckCircle, ArrowRight 
-} from 'lucide-react';
+import {
+  Phone, Map, Sparkles, User, Users, Heart, BookOpen,
+  Star, Calendar, MapPin, Clock, Instagram, Facebook,
+  Linkedin, Mail, Send, CheckCircle, ArrowRight } from
+'lucide-react';
 import {
   coachInfo,
   heroContent,
@@ -20,8 +20,8 @@ import {
   blogPosts,
   faqs,
   leadMagnet,
-  socialLinks
-} from '../mock';
+  socialLinks } from
+'../mock';
 import { toast } from 'sonner';
 
 const iconMap = {
@@ -94,10 +94,10 @@ export const Home = () => {
 
       {/* Hero Section */}
       <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroContent.backgroundImage})` }}
-        >
+          style={{ backgroundImage: `url(${heroContent.backgroundImage})` }}>
+
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-black/30"></div>
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center text-white">
@@ -107,11 +107,11 @@ export const Home = () => {
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
             {heroContent.tagline}
           </p>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             onClick={scrollToContact}
-            className="bg-[#D4A5A5] hover:bg-[#C49090] text-white px-8 py-6 text-lg transition-all duration-300 hover:scale-105"
-          >
+            className="bg-[#D4A5A5] hover:bg-[#C49090] text-white px-8 py-6 text-lg transition-all duration-300 hover:scale-105">
+
             {heroContent.ctaText}
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
@@ -130,22 +130,22 @@ export const Home = () => {
                 {coachInfo.bio}
               </p>
               <div className="space-y-3">
-                {coachInfo.credentials.map((cred, index) => (
-                  <div key={index} className="flex items-center gap-3">
+                {coachInfo.credentials.map((cred, index) =>
+                <div key={index} className="flex items-center gap-3">
                     <CheckCircle className="h-5 w-5 text-[#A8B88A] flex-shrink-0" />
                     <span className="text-[#6B5B4A]">{cred}</span>
                   </div>
-                ))}
+                )}
               </div>
             </div>
             <div className="order-1 md:order-2">
               <div className="relative">
                 <div className="absolute -inset-4 bg-[#D4A5A5]/20 rounded-full blur-2xl"></div>
-                <img 
-                  src={coachInfo.image} 
+                <img
+                  src={coachInfo.image}
                   alt={coachInfo.name}
-                  className="relative rounded-2xl shadow-2xl w-full h-[500px] object-cover"
-                />
+                  className="relative w-full h-[500px] object-cover !rounded-t-2xl !rounded-b-2xl !rounded-l-2xl !rounded-r-2xl shadow-2xl" />
+
               </div>
             </div>
           </div>
@@ -169,11 +169,11 @@ export const Home = () => {
               return (
                 <Card key={service.id} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-[#E8DED0] bg-white">
                   <div className="relative h-48 overflow-hidden rounded-t-lg">
-                    <img 
-                      src={service.image} 
+                    <img
+                      src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+
                     <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-3 rounded-full">
                       <IconComponent className="h-6 w-6 text-[#B8886B]" />
                     </div>
@@ -190,8 +190,8 @@ export const Home = () => {
                       Learn More
                     </Button>
                   </CardContent>
-                </Card>
-              );
+                </Card>);
+
             })}
           </div>
         </div>
@@ -221,8 +221,8 @@ export const Home = () => {
                   </div>
                   <h3 className="font-serif text-2xl text-[#6B5B4A] mb-3">{step.title}</h3>
                   <p className="text-[#9B8B7A] leading-relaxed">{step.description}</p>
-                </div>
-              );
+                </div>);
+
             })}
           </div>
         </div>
@@ -240,13 +240,13 @@ export const Home = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial) => (
-              <Card key={testimonial.id} className="bg-white border-[#E8DED0] hover:shadow-lg transition-shadow">
+            {testimonials.map((testimonial) =>
+            <Card key={testimonial.id} className="bg-white border-[#E8DED0] hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex gap-1 mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-[#D4A5A5] text-[#D4A5A5]" />
-                    ))}
+                    {[...Array(testimonial.rating)].map((_, i) =>
+                  <Star key={i} className="h-4 w-4 fill-[#D4A5A5] text-[#D4A5A5]" />
+                  )}
                   </div>
                   <CardTitle className="text-[#6B5B4A] text-lg">
                     {testimonial.name}
@@ -259,7 +259,7 @@ export const Home = () => {
                   <p className="text-[#6B5B4A] leading-relaxed italic">"{testimonial.text}"</p>
                 </CardContent>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -276,8 +276,8 @@ export const Home = () => {
             </p>
           </div>
           <div className="max-w-4xl mx-auto space-y-6">
-            {upcomingWorkshops.map((workshop) => (
-              <Card key={workshop.id} className="border-[#E8DED0] bg-white hover:shadow-lg transition-shadow">
+            {upcomingWorkshops.map((workshop) =>
+            <Card key={workshop.id} className="border-[#E8DED0] bg-white hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div className="flex-1">
@@ -300,25 +300,25 @@ export const Home = () => {
                       </div>
                     </div>
                     <div className="flex flex-col items-end gap-2">
-                      <Badge 
-                        className={workshop.status === 'Waitlist' 
-                          ? 'bg-[#9B8B7A] text-white' 
-                          : 'bg-[#A8B88A] text-white'
-                        }
-                      >
+                      <Badge
+                      className={workshop.status === 'Waitlist' ?
+                      'bg-[#9B8B7A] text-white' :
+                      'bg-[#A8B88A] text-white'
+                      }>
+
                         {workshop.status === 'Waitlist' ? 'Waitlist Only' : `${workshop.spotsLeft} spots left`}
                       </Badge>
-                      <Button 
-                        onClick={() => handleWorkshopRegister(workshop)}
-                        className="bg-[#B8886B] hover:bg-[#A07859] text-white"
-                      >
+                      <Button
+                      onClick={() => handleWorkshopRegister(workshop)}
+                      className="bg-[#B8886B] hover:bg-[#A07859] text-white">
+
                         {workshop.status === 'Waitlist' ? 'Join Waitlist' : 'Register Now'}
                       </Button>
                     </div>
                   </div>
                 </CardHeader>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -330,11 +330,11 @@ export const Home = () => {
             <Card className="border-none shadow-2xl bg-white">
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="relative h-64 md:h-auto rounded-l-lg overflow-hidden">
-                  <img 
-                    src={leadMagnet.image} 
+                  <img
+                    src={leadMagnet.image}
                     alt="Free Worksheets"
-                    className="w-full h-full object-cover"
-                  />
+                    className="w-full h-full object-cover" />
+
                 </div>
                 <div className="p-8 flex flex-col justify-center">
                   <h2 className="font-serif text-3xl text-[#6B5B4A] mb-4">
@@ -344,14 +344,14 @@ export const Home = () => {
                     {leadMagnet.description}
                   </p>
                   <form onSubmit={handleLeadMagnetSubmit} className="flex gap-2">
-                    <Input 
-                      type="email" 
+                    <Input
+                      type="email"
                       placeholder="Your email address"
                       value={leadMagnetEmail}
                       onChange={(e) => setLeadMagnetEmail(e.target.value)}
                       required
-                      className="flex-1 border-[#E8DED0]"
-                    />
+                      className="flex-1 border-[#E8DED0]" />
+
                     <Button type="submit" className="bg-[#D4A5A5] hover:bg-[#C49090] text-white">
                       Get Free Access
                     </Button>
@@ -375,14 +375,14 @@ export const Home = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {blogPosts.map((post) => (
-              <Card key={post.id} className="group hover:shadow-xl transition-all duration-300 border-[#E8DED0] bg-white overflow-hidden">
+            {blogPosts.map((post) =>
+            <Card key={post.id} className="group hover:shadow-xl transition-all duration-300 border-[#E8DED0] bg-white overflow-hidden">
                 <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={post.image} 
-                    alt={post.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  />
+                  <img
+                  src={post.image}
+                  alt={post.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
+
                   <Badge className="absolute top-4 left-4 bg-white/90 text-[#6B5B4A]">
                     {post.category}
                   </Badge>
@@ -402,7 +402,7 @@ export const Home = () => {
                   </Button>
                 </CardContent>
               </Card>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -420,12 +420,12 @@ export const Home = () => {
           </div>
           <div className="max-w-3xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
-              {faqs.map((faq) => (
-                <AccordionItem 
-                  key={faq.id} 
-                  value={`item-${faq.id}`}
-                  className="border border-[#E8DED0] rounded-lg px-6 bg-white"
-                >
+              {faqs.map((faq) =>
+              <AccordionItem
+                key={faq.id}
+                value={`item-${faq.id}`}
+                className="border border-[#E8DED0] rounded-lg px-6 bg-white">
+
                   <AccordionTrigger className="text-[#6B5B4A] font-serif text-lg hover:text-[#B8886B] hover:no-underline">
                     {faq.question}
                   </AccordionTrigger>
@@ -433,7 +433,7 @@ export const Home = () => {
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
-              ))}
+              )}
             </Accordion>
           </div>
         </div>
@@ -461,31 +461,31 @@ export const Home = () => {
               <CardContent>
                 <form onSubmit={handleContactSubmit} className="space-y-4">
                   <div>
-                    <Input 
+                    <Input
                       placeholder="Your Name"
                       value={contactForm.name}
-                      onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
+                      onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
                       required
-                      className="border-[#E8DED0]"
-                    />
+                      className="border-[#E8DED0]" />
+
                   </div>
                   <div>
-                    <Input 
+                    <Input
                       type="email"
                       placeholder="Your Email"
                       value={contactForm.email}
-                      onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
+                      onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
                       required
-                      className="border-[#E8DED0]"
-                    />
+                      className="border-[#E8DED0]" />
+
                   </div>
                   <div>
                     <select
                       value={contactForm.sessionType}
-                      onChange={(e) => setContactForm({...contactForm, sessionType: e.target.value})}
+                      onChange={(e) => setContactForm({ ...contactForm, sessionType: e.target.value })}
                       required
-                      className="w-full px-3 py-2 border border-[#E8DED0] rounded-md text-[#6B5B4A] bg-white"
-                    >
+                      className="w-full px-3 py-2 border border-[#E8DED0] rounded-md text-[#6B5B4A] bg-white">
+
                       <option value="">Select Session Type</option>
                       <option value="discovery">Discovery Call</option>
                       <option value="1on1">1:1 Coaching</option>
@@ -495,14 +495,14 @@ export const Home = () => {
                     </select>
                   </div>
                   <div>
-                    <Textarea 
+                    <Textarea
                       placeholder="Tell me a bit about what brings you here..."
                       value={contactForm.message}
-                      onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
+                      onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
                       required
                       rows={5}
-                      className="border-[#E8DED0] resize-none"
-                    />
+                      className="border-[#E8DED0] resize-none" />
+
                   </div>
                   <Button type="submit" className="w-full bg-[#B8886B] hover:bg-[#A07859] text-white">
                     Send Message
@@ -546,14 +546,14 @@ export const Home = () => {
               <h4 className="font-semibold mb-4">Newsletter</h4>
               <p className="text-[#D4C4B4] text-sm mb-3">Receive inspiration & updates</p>
               <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
-                <Input 
+                <Input
                   type="email"
                   placeholder="Your email"
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   required
-                  className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/50"
-                />
+                  className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/50" />
+
                 <Button type="submit" variant="secondary" size="icon" className="bg-[#D4A5A5] hover:bg-[#C49090]">
                   <Mail className="h-4 w-4" />
                 </Button>
@@ -599,8 +599,8 @@ export const Home = () => {
           </Button>
         </div>
       </div>
-    </div>
-  );
+    </div>);
+
 };
 
 export default Home;
