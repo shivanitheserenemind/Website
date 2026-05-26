@@ -318,46 +318,6 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* Lead Magnet Section */}
-      <section className="py-20 bg-[#A8B88A]">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <Card className="border-none shadow-2xl bg-white">
-              <div className="grid md:grid-cols-2 gap-8">
-                <div className="relative h-64 md:h-auto rounded-l-lg overflow-hidden">
-                  <img
-                    src={leadMagnet.image}
-                    alt="Free Worksheets"
-                    className="w-full h-full object-cover" />
-
-                </div>
-                <div className="p-8 flex flex-col justify-center">
-                  <h2 className="font-serif text-3xl text-[#6B5B4A] mb-4">
-                    {leadMagnet.title}
-                  </h2>
-                  <p className="text-[#9B8B7A] mb-6 leading-relaxed">
-                    {leadMagnet.description}
-                  </p>
-                  <form onSubmit={handleLeadMagnetSubmit} className="flex gap-2">
-                    <Input
-                      type="email"
-                      placeholder="Your email address"
-                      value={leadMagnetEmail}
-                      onChange={(e) => setLeadMagnetEmail(e.target.value)}
-                      required
-                      className="flex-1 border-[#E8DED0]" />
-
-                    <Button type="submit" className="bg-[#D4A5A5] hover:bg-[#C49090] text-white">
-                      Get Free Access
-                    </Button>
-                  </form>
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
-
       {/* Blog Section */}
       <section id="blog" className="py-20 bg-[#FAF8F5]">
         <div className="container mx-auto px-4">
