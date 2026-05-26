@@ -42,12 +42,12 @@ button:active, a:active {
 
 /* Ensure proper text readability */
 body {
-  color: #6B5B4A;
+  color: #1F4E48;
   line-height: 1.6;
 }
 
 /* Selection color */
 ::selection {
-  background-color: #D4A5A5;
+  background-color: #2D7A6F;
   color: white;
 }

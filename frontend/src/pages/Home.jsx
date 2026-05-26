@@ -70,9 +70,9 @@ export const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF8F5]">
+    <div className="min-h-screen bg-[#F7FAF5]">
       {/* Header */}
-      <header className="relative bg-white/90 backdrop-blur-md border-b border-[#E8DED0] shadow-sm overflow-visible">
+      <header className="relative bg-white/90 backdrop-blur-md border-b border-[#DCE5D0] shadow-sm overflow-visible">
         <div className="container mx-auto px-4 py-2 flex justify-between items-center h-36 md:h-44">
           <div className="-ml-[5%] relative">
             <img 
@@ -82,13 +82,13 @@ export const Home = () => {
             />
           </div>
           <nav className="hidden md:flex gap-16 text-xl font-medium">
-            <a href="#about" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">About</a>
-            <a href="#services" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">Services</a>
-            <a href="#workshops" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">Workshops</a>
-            <a href="#testimonials" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">Testimonials</a>
-            <a href="#contact" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">Contact</a>
+            <a href="#about" className="text-[#1F4E48] hover:text-[#2D7A6F] transition-colors">About</a>
+            <a href="#services" className="text-[#1F4E48] hover:text-[#2D7A6F] transition-colors">Services</a>
+            <a href="#workshops" className="text-[#1F4E48] hover:text-[#2D7A6F] transition-colors">Workshops</a>
+            <a href="#testimonials" className="text-[#1F4E48] hover:text-[#2D7A6F] transition-colors">Testimonials</a>
+            <a href="#contact" className="text-[#1F4E48] hover:text-[#2D7A6F] transition-colors">Contact</a>
           </nav>
-          <Button onClick={scrollToContact} className="bg-[#B8886B] hover:bg-[#A07859] text-white transition-all duration-300 text-lg px-8 py-6">
+          <Button onClick={scrollToContact} className="bg-[#2D7A6F] hover:bg-[#1F5C54] text-white transition-all duration-300 text-lg px-8 py-6">
             Book Discovery Call
           </Button>
         </div>
@@ -109,14 +109,6 @@ export const Home = () => {
           <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">
             {heroContent.tagline}
           </p>
-          <Button
-            size="lg"
-            onClick={scrollToContact}
-            className="bg-[#D4A5A5] hover:bg-[#C49090] text-white px-8 py-6 text-lg transition-all duration-300 hover:scale-105">
-
-            {heroContent.ctaText}
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
         </div>
       </section>
 
@@ -125,16 +117,16 @@ export const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <div className="order-2 md:order-1">
-              <h2 className="font-serif text-4xl md:text-5xl text-[#6B5B4A] mb-6">
+              <h2 className="font-serif text-4xl md:text-5xl text-[#1F4E48] mb-6">
                 About Me
               </h2>
-              <p className="text-[#6B5B4A] leading-relaxed mb-6 text-lg">
+              <p className="text-[#1F4E48] leading-relaxed mb-6 text-lg">
                 {coachInfo.bio}
               </p>
             </div>
             <div className="order-1 md:order-2">
               <div className="relative">
-                <div className="absolute -inset-4 bg-[#D4A5A5]/20 rounded-full blur-2xl"></div>
+                <div className="absolute -inset-4 bg-[#C9DCBE]/20 rounded-full blur-2xl"></div>
                 <img
                   src={coachInfo.image}
                   alt={coachInfo.name}
@@ -147,13 +139,13 @@ export const Home = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-[#FAF8F5]">
+      <section id="services" className="py-20 bg-[#F7FAF5]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl text-[#6B5B4A] mb-4">
+            <h2 className="font-serif text-4xl md:text-5xl text-[#1F4E48] mb-4">
               Services & Offerings
             </h2>
-            <p className="text-[#9B8B7A] max-w-2xl mx-auto">
+            <p className="text-[#5A8278] max-w-2xl mx-auto">
               Choose the path that feels right for your journey
             </p>
           </div>
@@ -162,7 +154,7 @@ export const Home = () => {
               const IconComponent = iconMap[service.icon];
               const isWorkshop = service.id === 2;
               return (
-                <Card key={service.id} className={`group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-[#E8DED0] bg-white ${isWorkshop ? 'md:col-span-2' : 'md:col-span-1'}`}>
+                <Card key={service.id} className={`group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-[#DCE5D0] bg-white ${isWorkshop ? 'md:col-span-2' : 'md:col-span-1'}`}>
                   <div className="relative h-48 overflow-hidden rounded-t-lg">
                     <img
                       src={service.image}
@@ -170,18 +162,18 @@ export const Home = () => {
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300" />
 
                     <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-3 rounded-full">
-                      <IconComponent className="h-6 w-6 text-[#B8886B]" />
+                      <IconComponent className="h-6 w-6 text-[#2D7A6F]" />
                     </div>
                   </div>
                   <CardHeader>
-                    <CardTitle className="text-[#6B5B4A] font-serif">{service.title}</CardTitle>
-                    <CardDescription className="text-[#9B8B7A]">
+                    <CardTitle className="text-[#1F4E48] font-serif">{service.title}</CardTitle>
+                    <CardDescription className="text-[#5A8278]">
                       {service.duration ? `${service.duration} • ${service.format}` : service.format}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-[#6B5B4A] mb-4 leading-relaxed">{service.description}</p>
-                    <Button className="w-full bg-[#A8B88A] hover:bg-[#97A67A] text-white transition-colors">
+                    <p className="text-[#1F4E48] mb-4 leading-relaxed">{service.description}</p>
+                    <Button className="w-full bg-[#8FB565] hover:bg-[#729550] text-white transition-colors">
                       Learn More
                     </Button>
                   </CardContent>
@@ -193,34 +185,34 @@ export const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 bg-[#FAF8F5]">
+      <section id="testimonials" className="py-20 bg-[#F7FAF5]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl text-[#6B5B4A] mb-4">
+            <h2 className="font-serif text-4xl md:text-5xl text-[#1F4E48] mb-4">
               What Clients Say
             </h2>
-            <p className="text-[#9B8B7A] max-w-2xl mx-auto">
+            <p className="text-[#5A8278] max-w-2xl mx-auto">
               Stories of transformation and healing
             </p>
           </div>
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {testimonials.map((testimonial) =>
-            <Card key={testimonial.id} className="bg-white border-[#E8DED0] hover:shadow-lg transition-shadow">
+            <Card key={testimonial.id} className="bg-white border-[#DCE5D0] hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex gap-1 mb-3">
                     {[...Array(testimonial.rating)].map((_, i) =>
-                  <Star key={i} className="h-4 w-4 fill-[#D4A5A5] text-[#D4A5A5]" />
+                  <Star key={i} className="h-4 w-4 fill-[#C9DCBE] text-[#C9DCBE]" />
                   )}
                   </div>
-                  <CardTitle className="text-[#6B5B4A] text-lg">
+                  <CardTitle className="text-[#1F4E48] text-lg">
                     {testimonial.name}
                   </CardTitle>
-                  <CardDescription className="text-[#9B8B7A]">
+                  <CardDescription className="text-[#5A8278]">
                     {testimonial.location}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-[#6B5B4A] leading-relaxed italic">"{testimonial.text}"</p>
+                  <p className="text-[#1F4E48] leading-relaxed italic">"{testimonial.text}"</p>
                 </CardContent>
               </Card>
             )}
@@ -232,23 +224,23 @@ export const Home = () => {
       <section id="workshops" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl text-[#6B5B4A] mb-4">
+            <h2 className="font-serif text-4xl md:text-5xl text-[#1F4E48] mb-4">
               Upcoming Workshops
             </h2>
-            <p className="text-[#9B8B7A] max-w-2xl mx-auto">
+            <p className="text-[#5A8278] max-w-2xl mx-auto">
               Join us for transformative group experiences
             </p>
           </div>
           <div className="max-w-4xl mx-auto space-y-6">
             {upcomingWorkshops.map((workshop) =>
-            <Card key={workshop.id} className="border-[#E8DED0] bg-white hover:shadow-lg transition-shadow">
+            <Card key={workshop.id} className="border-[#DCE5D0] bg-white hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                     <div className="flex-1">
-                      <CardTitle className="text-[#6B5B4A] font-serif text-xl mb-2">
+                      <CardTitle className="text-[#1F4E48] font-serif text-xl mb-2">
                         {workshop.title}
                       </CardTitle>
-                      <div className="flex flex-wrap gap-4 text-sm text-[#9B8B7A]">
+                      <div className="flex flex-wrap gap-4 text-sm text-[#5A8278]">
                         <div className="flex items-center gap-2">
                           <Calendar className="h-4 w-4" />
                           {workshop.date}
@@ -266,15 +258,15 @@ export const Home = () => {
                     <div className="flex flex-col items-end gap-2">
                       <Badge
                       className={workshop.status === 'Waitlist' ?
-                      'bg-[#9B8B7A] text-white' :
-                      'bg-[#A8B88A] text-white'
+                      'bg-[#5A8278] text-white' :
+                      'bg-[#8FB565] text-white'
                       }>
 
                         {workshop.status === 'Waitlist' ? 'Waitlist Only' : `${workshop.spotsLeft} spots left`}
                       </Badge>
                       <Button
                       onClick={() => handleWorkshopRegister(workshop)}
-                      className="bg-[#B8886B] hover:bg-[#A07859] text-white">
+                      className="bg-[#2D7A6F] hover:bg-[#1F5C54] text-white">
 
                         {workshop.status === 'Waitlist' ? 'Join Waitlist' : 'Register Now'}
                       </Button>
@@ -288,21 +280,21 @@ export const Home = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-[#FAF8F5]">
+      <section id="contact" className="py-20 bg-[#F7FAF5]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl text-[#6B5B4A] mb-4">
+            <h2 className="font-serif text-4xl md:text-5xl text-[#1F4E48] mb-4">
               Let's Connect
             </h2>
-            <p className="text-[#9B8B7A] max-w-2xl mx-auto">
+            <p className="text-[#5A8278] max-w-2xl mx-auto">
               Ready to begin your transformation? I'm here to support you.
             </p>
           </div>
           <div className="max-w-2xl mx-auto">
-            <Card className="border-[#E8DED0] bg-white shadow-xl">
+            <Card className="border-[#DCE5D0] bg-white shadow-xl">
               <CardHeader>
-                <CardTitle className="text-[#6B5B4A] font-serif text-2xl">Send Me a Message</CardTitle>
-                <CardDescription className="text-[#9B8B7A]">
+                <CardTitle className="text-[#1F4E48] font-serif text-2xl">Send Me a Message</CardTitle>
+                <CardDescription className="text-[#5A8278]">
                   I typically respond within 24 hours
                 </CardDescription>
               </CardHeader>
@@ -314,7 +306,7 @@ export const Home = () => {
                       value={contactForm.name}
                       onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
                       required
-                      className="border-[#E8DED0]" />
+                      className="border-[#DCE5D0]" />
 
                   </div>
                   <div>
@@ -324,7 +316,7 @@ export const Home = () => {
                       value={contactForm.email}
                       onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
                       required
-                      className="border-[#E8DED0]" />
+                      className="border-[#DCE5D0]" />
 
                   </div>
                   <div>
@@ -332,7 +324,7 @@ export const Home = () => {
                       value={contactForm.sessionType}
                       onChange={(e) => setContactForm({ ...contactForm, sessionType: e.target.value })}
                       required
-                      className="w-full px-3 py-2 border border-[#E8DED0] rounded-md text-[#6B5B4A] bg-white">
+                      className="w-full px-3 py-2 border border-[#DCE5D0] rounded-md text-[#1F4E48] bg-white">
 
                       <option value="">Select Session Type</option>
                       <option value="discovery">Discovery Call</option>
@@ -349,10 +341,10 @@ export const Home = () => {
                       onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
                       required
                       rows={5}
-                      className="border-[#E8DED0] resize-none" />
+                      className="border-[#DCE5D0] resize-none" />
 
                   </div>
-                  <Button type="submit" className="w-full bg-[#B8886B] hover:bg-[#A07859] text-white">
+                  <Button type="submit" className="w-full bg-[#2D7A6F] hover:bg-[#1F5C54] text-white">
                     Send Message
                     <Send className="ml-2 h-4 w-4" />
                   </Button>
@@ -364,18 +356,18 @@ export const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#6B5B4A] text-white py-12">
+      <footer className="bg-[#1F4E48] text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="font-serif text-2xl mb-4">Shivani Ambekar</h3>
-              <p className="text-[#D4C4B4] text-sm leading-relaxed">
+              <p className="text-[#B5C7B0] text-sm leading-relaxed">
                 Licensed Heal Your Life® Coach & Workshop Facilitator
               </p>
             </div>
             <div>
               <h4 className="font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-sm text-[#D4C4B4]">
+              <ul className="space-y-2 text-sm text-[#B5C7B0]">
                 <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
                 <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
                 <li><a href="#workshops" className="hover:text-white transition-colors">Workshops</a></li>
@@ -383,7 +375,7 @@ export const Home = () => {
             </div>
             <div>
               <h4 className="font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm text-[#D4C4B4]">
+              <ul className="space-y-2 text-sm text-[#B5C7B0]">
                 <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Disclaimer</a></li>
@@ -391,7 +383,7 @@ export const Home = () => {
             </div>
             <div>
               <h4 className="font-semibold mb-4">Newsletter</h4>
-              <p className="text-[#D4C4B4] text-sm mb-3">Receive inspiration & updates</p>
+              <p className="text-[#B5C7B0] text-sm mb-3">Receive inspiration & updates</p>
               <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
                 <Input
                   type="email"
@@ -401,7 +393,7 @@ export const Home = () => {
                   required
                   className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-white/50" />
 
-                <Button type="submit" variant="secondary" size="icon" className="bg-[#D4A5A5] hover:bg-[#C49090]">
+                <Button type="submit" variant="secondary" size="icon" className="bg-[#C9DCBE] hover:bg-[#B0CFA0]">
                   <Mail className="h-4 w-4" />
                 </Button>
               </form>
@@ -410,22 +402,22 @@ export const Home = () => {
           
           <div className="border-t border-white/20 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-[#D4C4B4] text-sm">
+              <p className="text-[#B5C7B0] text-sm">
                 © 2025 Shivani Ambekar. All rights reserved. Licensed Heal Your Life® Teacher.
               </p>
               <div className="flex gap-4">
-                <a href="#" className="text-[#D4C4B4] hover:text-white transition-colors">
+                <a href="#" className="text-[#B5C7B0] hover:text-white transition-colors">
                   <Instagram className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-[#D4C4B4] hover:text-white transition-colors">
+                <a href="#" className="text-[#B5C7B0] hover:text-white transition-colors">
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a href="#" className="text-[#D4C4B4] hover:text-white transition-colors">
+                <a href="#" className="text-[#B5C7B0] hover:text-white transition-colors">
                   <Linkedin className="h-5 w-5" />
                 </a>
               </div>
             </div>
-            <p className="text-[#D4C4B4] text-xs mt-4 text-center">
+            <p className="text-[#B5C7B0] text-xs mt-4 text-center">
               Disclaimer: Coaching is not therapy and is not a substitute for professional mental health treatment.
             </p>
           </div>
@@ -433,15 +425,15 @@ export const Home = () => {
       </footer>
 
       {/* Cookie Consent Banner */}
-      <div className="fixed bottom-4 right-4 max-w-sm bg-white border border-[#E8DED0] rounded-lg shadow-lg p-4 z-50">
-        <p className="text-[#6B5B4A] text-sm mb-3">
+      <div className="fixed bottom-4 right-4 max-w-sm bg-white border border-[#DCE5D0] rounded-lg shadow-lg p-4 z-50">
+        <p className="text-[#1F4E48] text-sm mb-3">
           We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
         </p>
         <div className="flex gap-2">
-          <Button size="sm" className="flex-1 bg-[#A8B88A] hover:bg-[#97A67A] text-white">
+          <Button size="sm" className="flex-1 bg-[#8FB565] hover:bg-[#729550] text-white">
             Accept
           </Button>
-          <Button size="sm" variant="outline" className="flex-1 border-[#E8DED0] text-[#6B5B4A]">
+          <Button size="sm" variant="outline" className="flex-1 border-[#DCE5D0] text-[#1F4E48]">
             Decline
           </Button>
         </div>
