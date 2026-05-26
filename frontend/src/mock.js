@@ -3,7 +3,7 @@
 export const coachInfo = {
   name: "Shivani Ambekar",
   title: "Licensed Heal Your Life® Coach & Workshop Facilitator",
-  bio: "I'm Shivani Ambekar, a certified Heal Your Life® coach dedicated to helping women discover their inner strength and create lasting transformation. After my own journey of healing and self-discovery, I found my calling in guiding others through their path to wholeness. Through Louise Hay's transformative teachings, I've witnessed countless women reclaim their power, heal old wounds, and step into lives they truly love.",
+  bio: "I am Shivani Ambekar, a psychologist (Clinical Spl.), REBT therapist certified by late Dr. Nadkarni (IPH), a globally licensed Heal Your Life® workshop facilitator and a certified practitioner of transactional analysis (TA) and Gestalt therapy. After working as a psychologist with leading organisations including Google, Accenture, Meta, Truworth and Optum United Health Group, I chose to build my independent practice rooted in a deeper and holistic approach. My work is centered around the mind-body connection — understanding how emotions, beliefs, past experiences, and thought patterns influence emotional and physical well-being. Through an integrative and compassionate approach, I support individuals in building self-awareness, emotional resilience and meaningful inner transformation.",
   credentials: [
     "Licensed Heal Your Life® Teacher & Coach",
     "Certified by Hay House, Inc.",
@@ -15,7 +15,7 @@ export const coachInfo = {
 
 export const heroContent = {
   headline: "You Deserve a Life You Desire",
-  tagline: "Transform your relationship with yourself and create the life you've always dreamed of through proven Heal Your Life® practices.",
+  tagline: "Transform your relationship with yourself and create the life you've always dreamed of because you matter.",
   ctaText: "Book Your Free Discovery Call",
   backgroundImage: "https://images.pexels.com/photos/13865894/pexels-photo-13865894.jpeg"
 };
@@ -23,7 +23,7 @@ export const heroContent = {
 export const services = [
   {
     id: 1,
-    title: "1:1 Coaching Sessions",
+    title: "Individual Sessions",
     description: "Personalized guidance tailored to your unique journey. Together we'll uncover limiting beliefs, release old patterns, and create new empowering narratives.",
     duration: "60 minutes",
     format: "In-person or Virtual",
@@ -47,15 +47,6 @@ export const services = [
     format: "Virtual Cohorts",
     image: "https://images.unsplash.com/photo-1524758870432-af57e54afa26",
     icon: "heart"
-  },
-  {
-    id: 4,
-    title: "Self-Paced Resources",
-    description: "Access worksheets, guided meditations, and transformative exercises at your own pace. Perfect for maintaining your practice between sessions.",
-    duration: "Lifetime Access",
-    format: "Online Portal",
-    image: "https://images.unsplash.com/photo-1573497620053-ea5300f94f21",
-    icon: "bookOpen"
   }
 ];
 
@@ -107,33 +98,13 @@ export const testimonials = [
 export const upcomingWorkshops = [
   {
     id: 1,
-    title: "Heal Your Life® Foundation Workshop",
-    date: "March 15, 2025",
-    time: "9:00 AM - 5:00 PM IST",
+    title: "2 Day Transformational Heal Your Life® Non-Residential Workshop",
+    date: "20th & 21st June 2026",
+    time: "9:30 AM - 6:00 PM",
     format: "In-Person",
-    location: "Mumbai",
+    location: "Dombivli",
     status: "Open",
-    spotsLeft: 8
-  },
-  {
-    id: 2,
-    title: "Self-Love & Affirmations Intensive",
-    date: "March 22, 2025",
-    time: "10:00 AM - 1:00 PM IST",
-    format: "Online",
-    location: "Zoom",
-    status: "Open",
-    spotsLeft: 15
-  },
-  {
-    id: 3,
-    title: "Heal Your Life® Advanced Workshop",
-    date: "April 5, 2025",
-    time: "9:00 AM - 5:00 PM IST",
-    format: "In-Person",
-    location: "Pune",
-    status: "Waitlist",
-    spotsLeft: 0
+    spotsLeft: 12
   }
 ];
 

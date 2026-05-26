@@ -78,7 +78,7 @@ export const Home = () => {
             <img 
               src="https://customer-assets.emergentagent.com/job_transform-with-love/artifacts/47cs2zxo_Serene_Mind_Logo_Final.ai__3_-removebg-preview.png" 
               alt="Serene Mind - Peace Within"
-              className="h-24 w-auto object-contain"
+              className="h-[7.2rem] w-auto object-contain"
             />
           </div>
           <nav className="hidden md:flex gap-6 text-sm">
@@ -166,7 +166,7 @@ export const Home = () => {
               Choose the path that feels right for your journey
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {services.map((service) => {
               const IconComponent = iconMap[service.icon];
               return (
