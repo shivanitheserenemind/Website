@@ -392,6 +392,9 @@ export const Home = () => {
               <p className="text-[#B5C7B0] text-lg md:text-xl leading-relaxed">
                 Psychologist, Clinical Spl.
               </p>
+              <a href="mailto:team@theserenemind.in" className="text-[#B5C7B0] hover:text-white text-lg md:text-xl leading-relaxed transition-colors block mt-2">
+                team@theserenemind.in
+              </a>
             </div>
             <div>
               <h4 className="font-semibold mb-5 text-2xl md:text-3xl">Quick Links</h4>
@@ -409,7 +412,7 @@ export const Home = () => {
                 © 2025 Shivani Ambekar. All rights reserved. Licensed Heal Your Life® Teacher.
               </p>
               <div className="flex gap-5">
-                <a href="#" className="text-[#B5C7B0] hover:text-white transition-colors">
+                <a href="https://www.instagram.com/shivanii.serenemind?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="text-[#B5C7B0] hover:text-white transition-colors">
                   <Instagram className="h-7 w-7" />
                 </a>
                 <a href="#" className="text-[#B5C7B0] hover:text-white transition-colors">
