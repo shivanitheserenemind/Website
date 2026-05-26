@@ -384,18 +384,18 @@ export const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#1F4E48] text-white py-12">
+      <footer className="bg-[#1F4E48] text-white py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 mb-8">
+          <div className="grid md:grid-cols-2 gap-12 mb-12">
             <div>
-              <h3 className="font-serif text-2xl mb-4">Shivani Ambekar</h3>
-              <p className="text-[#B5C7B0] text-sm leading-relaxed">
+              <h3 className="font-serif text-4xl md:text-5xl mb-4">Shivani Ambekar</h3>
+              <p className="text-[#B5C7B0] text-lg md:text-xl leading-relaxed">
                 Psychologist, Clinical Spl.
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-sm text-[#B5C7B0]">
+              <h4 className="font-semibold mb-5 text-2xl md:text-3xl">Quick Links</h4>
+              <ul className="space-y-3 text-lg md:text-xl text-[#B5C7B0]">
                 <li><a href="#about" className="hover:text-white transition-colors">About</a></li>
                 <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
                 <li><a href="#workshops" className="hover:text-white transition-colors">Workshops</a></li>
@@ -405,18 +405,18 @@ export const Home = () => {
           
           <div className="border-t border-white/20 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <p className="text-[#B5C7B0] text-sm">
+              <p className="text-[#B5C7B0] text-base md:text-lg">
                 © 2025 Shivani Ambekar. All rights reserved. Licensed Heal Your Life® Teacher.
               </p>
-              <div className="flex gap-4">
+              <div className="flex gap-5">
                 <a href="#" className="text-[#B5C7B0] hover:text-white transition-colors">
-                  <Instagram className="h-5 w-5" />
+                  <Instagram className="h-7 w-7" />
                 </a>
                 <a href="#" className="text-[#B5C7B0] hover:text-white transition-colors">
-                  <Facebook className="h-5 w-5" />
+                  <Facebook className="h-7 w-7" />
                 </a>
                 <a href="#" className="text-[#B5C7B0] hover:text-white transition-colors">
-                  <Linkedin className="h-5 w-5" />
+                  <Linkedin className="h-7 w-7" />
                 </a>
               </div>
             </div>
