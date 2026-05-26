@@ -153,7 +153,7 @@ export const Home = () => {
             {services.map((service) => {
               const IconComponent = iconMap[service.icon];
               return (
-                <Card key={service.id} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-[#DCE5D0] bg-white">
+                <Card key={service.id} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-[#DCE5D0] bg-white flex flex-col">
                   <div className="relative h-48 overflow-hidden rounded-t-lg">
                     <img
                       src={service.image}
@@ -170,9 +170,9 @@ export const Home = () => {
                       {service.duration ? `${service.duration} • ${service.format}` : service.format}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
-                    <p className="text-[#1F4E48] mb-4 leading-relaxed">{service.description}</p>
-                    <Button className="w-full bg-[#8FB565] hover:bg-[#729550] text-white transition-colors">
+                  <CardContent className="flex flex-col flex-1">
+                    <p className="text-[#1F4E48] mb-4 leading-relaxed flex-1">{service.description}</p>
+                    <Button className="w-full bg-[#8FB565] hover:bg-[#729550] text-white transition-colors mt-auto">
                       Learn More
                     </Button>
                   </CardContent>
