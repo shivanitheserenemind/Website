@@ -81,7 +81,7 @@ export const Home = () => {
               className="h-48 md:h-[14.3rem] w-auto object-contain"
             />
           </div>
-          <nav className="hidden md:flex gap-10 text-xl font-medium">
+          <nav className="hidden md:flex gap-16 text-xl font-medium">
             <a href="#about" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">About</a>
             <a href="#services" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">Services</a>
             <a href="#workshops" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">Workshops</a>
