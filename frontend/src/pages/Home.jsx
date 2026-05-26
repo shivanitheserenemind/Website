@@ -8,7 +8,7 @@ import { Badge } from '../components/ui/badge';
 import {
   Phone, Map, Sparkles, User, Users, Heart, BookOpen,
   Star, Calendar, MapPin, Clock, Instagram, Facebook,
-  Linkedin, Mail, Send, CheckCircle, ArrowRight } from
+  Linkedin, Mail, Send, CheckCircle, ArrowRight, Menu, X } from
 'lucide-react';
 import {
   coachInfo,
@@ -38,6 +38,7 @@ export const Home = () => {
   const [contactForm, setContactForm] = useState({ name: '', email: '', message: '', sessionType: '' });
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [leadMagnetEmail, setLeadMagnetEmail] = useState('');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleContactSubmit = (e) => {
     e.preventDefault();
@@ -72,13 +73,13 @@ export const Home = () => {
   return (
     <div className="min-h-screen bg-[#F7FAF5]">
       {/* Header */}
-      <header className="relative bg-white/90 backdrop-blur-md border-b border-[#DCE5D0] shadow-sm overflow-visible">
-        <div className="container mx-auto px-4 py-2 flex justify-between items-center h-36 md:h-44">
-          <div className="-ml-[5%] relative">
+      <header className="relative bg-white/90 backdrop-blur-md border-b border-[#DCE5D0] shadow-sm overflow-visible z-50">
+        <div className="container mx-auto px-4 py-2 flex justify-between items-center h-20 md:h-44">
+          <div className="md:-ml-[5%] relative">
             <img 
               src="https://customer-assets.emergentagent.com/job_transform-with-love/artifacts/47cs2zxo_Serene_Mind_Logo_Final.ai__3_-removebg-preview.png" 
               alt="Serene Mind - Peace Within"
-              className="h-48 md:h-[14.3rem] w-auto object-contain"
+              className="h-24 md:h-[14.3rem] w-auto object-contain"
             />
           </div>
           <nav className="hidden md:flex gap-16 text-xl font-medium">
@@ -88,10 +89,39 @@ export const Home = () => {
             <a href="#testimonials" className="text-[#1F4E48] hover:text-[#2D7A6F] transition-colors">Testimonials</a>
             <a href="#contact" className="text-[#1F4E48] hover:text-[#2D7A6F] transition-colors">Contact</a>
           </nav>
-          <Button onClick={scrollToContact} className="bg-[#2D7A6F] hover:bg-[#1F5C54] text-white transition-all duration-300 text-lg px-8 py-6">
+          <Button onClick={scrollToContact} className="hidden md:flex bg-[#2D7A6F] hover:bg-[#1F5C54] text-white transition-all duration-300 text-lg px-8 py-6">
             Book Discovery Call
           </Button>
+          {/* Mobile Hamburger */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 text-[#1F4E48]"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
+          </button>
         </div>
+
+        {/* Mobile Menu Dropdown */}
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-[#DCE5D0] shadow-lg z-50">
+            <nav className="flex flex-col py-4">
+              <a href="#about" onClick={() => setMobileMenuOpen(false)} className="px-6 py-3 text-[#1F4E48] hover:bg-[#F7FAF5] transition-colors">About</a>
+              <a href="#services" onClick={() => setMobileMenuOpen(false)} className="px-6 py-3 text-[#1F4E48] hover:bg-[#F7FAF5] transition-colors">Services</a>
+              <a href="#workshops" onClick={() => setMobileMenuOpen(false)} className="px-6 py-3 text-[#1F4E48] hover:bg-[#F7FAF5] transition-colors">Workshops</a>
+              <a href="#testimonials" onClick={() => setMobileMenuOpen(false)} className="px-6 py-3 text-[#1F4E48] hover:bg-[#F7FAF5] transition-colors">Testimonials</a>
+              <a href="#contact" onClick={() => setMobileMenuOpen(false)} className="px-6 py-3 text-[#1F4E48] hover:bg-[#F7FAF5] transition-colors">Contact</a>
+              <div className="px-6 py-3">
+                <Button 
+                  onClick={() => { scrollToContact(); setMobileMenuOpen(false); }} 
+                  className="w-full bg-[#2D7A6F] hover:bg-[#1F5C54] text-white"
+                >
+                  Book Discovery Call
+                </Button>
+              </div>
+            </nav>
+          </div>
+        )}
       </header>
 
       {/* Hero Section */}
@@ -359,7 +389,7 @@ export const Home = () => {
             <div>
               <h3 className="font-serif text-2xl mb-4">Shivani Ambekar</h3>
               <p className="text-[#B5C7B0] text-sm leading-relaxed">
-                team@theserenemind.com
+                Psychologist, Clinical Spl.
               </p>
             </div>
             <div>

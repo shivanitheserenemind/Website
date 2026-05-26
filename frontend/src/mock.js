@@ -75,7 +75,7 @@ export const testimonials = [
     name: "Lily",
     location: "UK",
     rating: 5,
-    text: "I got to know about Serene Minds because of a family acquaintance I knew. And then my journey with Shivani began. I was not sure at first how I am going to speak about anything, because when it's any kind of trauma or an unpleasant memory, it is difficult to speak about it. Especially when you are not in a good mental headspace. But, to my surprise, Shivani made me feel very comfortable in every session. And that's what I needed; a therapist who hears me out like a friend, a hearing ear, a listener. And, I will definitely say that she does a brilliant job at helping you through your issues. I realised that I had gained a lot of strength just because of her sessions. I'd absolutely recommend Serene Minds to anyone who is looking for therapy. Thank you Shivani and Serene Minds."
+    text: "I got to know about Serene Mind because of a family acquaintance I knew. And then my journey with Shivani began. I was not sure at first how I am going to speak about anything, because when it's any kind of trauma or an unpleasant memory, it is difficult to speak about it. Especially when you are not in a good mental headspace. But, to my surprise, Shivani made me feel very comfortable in every session. And that's what I needed; a therapist who hears me out like a friend, a hearing ear, a listener. And, I will definitely say that she does a brilliant job at helping you through your issues. I realised that I had gained a lot of strength just because of her sessions. I'd absolutely recommend Serene Mind to anyone who is looking for therapy. Thank you Shivani and Serene Mind."
   }
 ];
 
