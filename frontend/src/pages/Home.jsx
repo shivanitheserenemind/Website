@@ -317,38 +317,6 @@ export const Home = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl text-[#6B5B4A] mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-[#9B8B7A] max-w-2xl mx-auto">
-              Everything you need to know about working together
-            </p>
-          </div>
-          <div className="max-w-3xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
-              {faqs.map((faq) =>
-              <AccordionItem
-                key={faq.id}
-                value={`item-${faq.id}`}
-                className="border border-[#E8DED0] rounded-lg px-6 bg-white">
-
-                  <AccordionTrigger className="text-[#6B5B4A] font-serif text-lg hover:text-[#B8886B] hover:no-underline">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-[#9B8B7A] leading-relaxed">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              )}
-            </Accordion>
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-[#FAF8F5]">
         <div className="container mx-auto px-4">
