@@ -78,7 +78,7 @@ export const Home = () => {
             <img 
               src="https://customer-assets.emergentagent.com/job_transform-with-love/artifacts/47cs2zxo_Serene_Mind_Logo_Final.ai__3_-removebg-preview.png" 
               alt="Serene Mind - Peace Within"
-              className="h-36 md:h-44 w-auto object-contain"
+              className="h-48 md:h-[14.3rem] w-auto object-contain"
             />
           </div>
           <nav className="hidden md:flex gap-10 text-xl font-medium">
