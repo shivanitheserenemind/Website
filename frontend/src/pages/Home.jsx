@@ -72,7 +72,7 @@ export const Home = () => {
   return (
     <div className="min-h-screen bg-[#FAF8F5]">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-[#E8DED0] shadow-sm">
+      <header className="relative bg-white/90 backdrop-blur-md border-b border-[#E8DED0] shadow-sm">
         <div className="container mx-auto px-4 py-2 flex justify-between items-center">
           <div>
             <img 
