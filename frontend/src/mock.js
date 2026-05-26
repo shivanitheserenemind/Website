@@ -24,7 +24,7 @@ export const services = [
   {
     id: 1,
     title: "Individual Sessions",
-    description: "Personalized guidance tailored to your unique journey. Together we'll uncover limiting beliefs, release old patterns, and create new empowering narratives.",
+    description: "",
     duration: "60 minutes",
     format: "In-person or Virtual",
     image: "https://images.pexels.com/photos/9065264/pexels-photo-9065264.jpeg",
@@ -34,19 +34,10 @@ export const services = [
     id: 2,
     title: "Heal Your Life® Workshops",
     description: "Transformative group experiences based on Louise Hay's teachings. Connect with like-minded souls while exploring self-love, affirmations, and healing.",
-    duration: "Half-day or Full-day",
+    duration: "",
     format: "In-person & Online",
     image: "https://images.unsplash.com/photo-1778694276944-66df489166e6",
     icon: "users"
-  },
-  {
-    id: 3,
-    title: "Group Programs",
-    description: "Join a supportive community on a 6-12 week journey of deep transformation. Weekly sessions with accountability, sisterhood, and lasting change.",
-    duration: "6-12 Weeks",
-    format: "Virtual Cohorts",
-    image: "https://images.unsplash.com/photo-1524758870432-af57e54afa26",
-    icon: "heart"
   }
 ];
 

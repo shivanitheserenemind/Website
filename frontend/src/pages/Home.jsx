@@ -157,7 +157,7 @@ export const Home = () => {
               Choose the path that feels right for your journey
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {services.map((service) => {
               const IconComponent = iconMap[service.icon];
               return (
@@ -175,7 +175,7 @@ export const Home = () => {
                   <CardHeader>
                     <CardTitle className="text-[#6B5B4A] font-serif">{service.title}</CardTitle>
                     <CardDescription className="text-[#9B8B7A]">
-                      {service.duration} • {service.format}
+                      {service.duration ? `${service.duration} • ${service.format}` : service.format}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -185,37 +185,6 @@ export const Home = () => {
                     </Button>
                   </CardContent>
                 </Card>);
-
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl text-[#6B5B4A] mb-4">
-              How It Works
-            </h2>
-            <p className="text-[#9B8B7A] max-w-2xl mx-auto">
-              Your transformation journey in three simple steps
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {processSteps.map((step) => {
-              const IconComponent = iconMap[step.icon];
-              return (
-                <div key={step.number} className="relative text-center">
-                  <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-[#D4A5A5]/20 mb-6">
-                    <IconComponent className="h-10 w-10 text-[#B8886B]" />
-                  </div>
-                  <div className="absolute top-8 left-1/2 -translate-x-1/2 -z-10 font-serif text-8xl text-[#E8DED0] font-bold">
-                    {step.number}
-                  </div>
-                  <h3 className="font-serif text-2xl text-[#6B5B4A] mb-3">{step.title}</h3>
-                  <p className="text-[#9B8B7A] leading-relaxed">{step.description}</p>
-                </div>);
 
             })}
           </div>
