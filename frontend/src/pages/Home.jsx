@@ -72,9 +72,9 @@ export const Home = () => {
   return (
     <div className="min-h-screen bg-[#FAF8F5]">
       {/* Header */}
-      <header className="relative bg-white/90 backdrop-blur-md border-b border-[#E8DED0] shadow-sm">
-        <div className="container mx-auto px-4 py-2 flex justify-between items-center">
-          <div className="-ml-[5%]">
+      <header className="relative bg-white/90 backdrop-blur-md border-b border-[#E8DED0] shadow-sm overflow-visible">
+        <div className="container mx-auto px-4 py-2 flex justify-between items-center h-36 md:h-44">
+          <div className="-ml-[5%] relative">
             <img 
               src="https://customer-assets.emergentagent.com/job_transform-with-love/artifacts/47cs2zxo_Serene_Mind_Logo_Final.ai__3_-removebg-preview.png" 
               alt="Serene Mind - Peace Within"
