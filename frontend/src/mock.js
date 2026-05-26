@@ -84,7 +84,7 @@ export const upcomingWorkshops = [
     id: 1,
     title: "2 Day Transformational Heal Your Life® Non-Residential Workshop",
     date: "20th & 21st June 2026",
-    time: "9:30 AM - 6:00 PM",
+    time: "9:30 AM - 6:30 PM",
     format: "In-Person",
     location: "Dombivli",
     status: "Open",

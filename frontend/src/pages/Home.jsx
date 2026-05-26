@@ -74,12 +74,13 @@ export const Home = () => {
     <div className="min-h-screen bg-[#F7FAF5]">
       {/* Header */}
       <header className="relative bg-white/90 backdrop-blur-md border-b border-[#DCE5D0] shadow-sm overflow-visible z-50">
-        <div className="container mx-auto px-4 py-2 flex justify-between items-center h-20 md:h-44">
-          <div className="md:-ml-[5%] relative">
+        <div className="container mx-auto px-4 py-2 flex justify-between items-center h-20 md:h-44 box-border">
+          <div className="md:-ml-[5%] relative flex items-center">
             <img 
               src="https://customer-assets.emergentagent.com/job_transform-with-love/artifacts/47cs2zxo_Serene_Mind_Logo_Final.ai__3_-removebg-preview.png" 
               alt="Serene Mind - Peace Within"
-              className="h-24 md:h-[14.3rem] w-auto object-contain"
+              className="h-24 md:h-[14.3rem] w-auto object-contain block"
+              style={{ imageRendering: 'auto' }}
             />
           </div>
           <nav className="hidden md:flex gap-16 text-xl font-medium">
