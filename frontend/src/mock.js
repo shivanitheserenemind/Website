@@ -14,7 +14,7 @@ export const coachInfo = {
 };
 
 export const heroContent = {
-  headline: "You Desire a Life You Love",
+  headline: "You Deserve a Life You Desire",
   tagline: "Transform your relationship with yourself and create the life you've always dreamed of through proven Heal Your Life® practices.",
   ctaText: "Book Your Free Discovery Call",
   backgroundImage: "https://images.pexels.com/photos/13865894/pexels-photo-13865894.jpeg"
