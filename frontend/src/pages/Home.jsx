@@ -81,14 +81,14 @@ export const Home = () => {
               className="h-64 md:h-80 w-auto object-contain"
             />
           </div>
-          <nav className="hidden md:flex gap-6 text-sm">
+          <nav className="hidden md:flex gap-10 text-xl font-medium">
             <a href="#about" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">About</a>
             <a href="#services" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">Services</a>
             <a href="#workshops" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">Workshops</a>
             <a href="#testimonials" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">Testimonials</a>
             <a href="#contact" className="text-[#6B5B4A] hover:text-[#B8886B] transition-colors">Contact</a>
           </nav>
-          <Button onClick={scrollToContact} className="bg-[#B8886B] hover:bg-[#A07859] text-white transition-all duration-300">
+          <Button onClick={scrollToContact} className="bg-[#B8886B] hover:bg-[#A07859] text-white transition-all duration-300 text-lg px-8 py-6">
             Book Discovery Call
           </Button>
         </div>
