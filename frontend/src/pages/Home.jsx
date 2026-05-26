@@ -157,11 +157,12 @@ export const Home = () => {
               Choose the path that feels right for your journey
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {services.map((service) => {
               const IconComponent = iconMap[service.icon];
+              const isWorkshop = service.id === 2;
               return (
-                <Card key={service.id} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-[#E8DED0] bg-white">
+                <Card key={service.id} className={`group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-[#E8DED0] bg-white ${isWorkshop ? 'md:col-span-2' : 'md:col-span-1'}`}>
                   <div className="relative h-48 overflow-hidden rounded-t-lg">
                     <img
                       src={service.image}
