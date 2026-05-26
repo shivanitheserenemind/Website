@@ -74,24 +74,17 @@ export const processSteps = [
 export const testimonials = [
   {
     id: 1,
-    name: "Priya",
-    location: "Mumbai",
+    name: "GP",
+    location: "Canada",
     rating: 5,
-    text: "Working with Shivani changed my life. I finally released 30 years of self-doubt and discovered a confidence I didn't know existed. Her gentle guidance and powerful tools gave me the courage to start my own business."
+    text: "The mental congestion and suffocation is so bothersome that it hampers daily life. My life was affected brutally until I found Shivani. Our conversations unfolded ways for me to segregate my thoughts and channelize them into actions. Shivani acts like a catalyst, she empowers you to have more conversations with yourself while keeping a correct space of mind intact. The therapy sessions are not just relaxing but extremely transferable in terms of skills and actions. I highly recommend Shivani, to everyone around me, always!"
   },
   {
     id: 2,
-    name: "Anjali",
-    location: "Pune",
+    name: "Lily",
+    location: "UK",
     rating: 5,
-    text: "The Heal Your Life workshop was transformational. Shivani creates such a safe, nurturing space. I left feeling lighter, clearer, and more connected to my authentic self than I have in decades."
-  },
-  {
-    id: 3,
-    name: "Meera",
-    location: "Bangalore",
-    rating: 5,
-    text: "Shivani's coaching helped me navigate one of the darkest periods of my life. Her compassion, wisdom, and practical tools gave me hope when I had none. I'm forever grateful for her presence in my journey."
+    text: "I got to know about Serene Minds because of a family acquaintance I knew. And then my journey with Shivani began. I was not sure at first how I am going to speak about anything, because when it's any kind of trauma or an unpleasant memory, it is difficult to speak about it. Especially when you are not in a good mental headspace. But, to my surprise, Shivani made me feel very comfortable in every session. And that's what I needed; a therapist who hears me out like a friend, a hearing ear, a listener. And, I will definitely say that she does a brilliant job at helping you through your issues. I realised that I had gained a lot of strength just because of her sessions. I'd absolutely recommend Serene Minds to anyone who is looking for therapy. Thank you Shivani and Serene Minds."
   }
 ];
 
