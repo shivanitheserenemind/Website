@@ -132,14 +132,6 @@ export const Home = () => {
               <p className="text-[#6B5B4A] leading-relaxed mb-6 text-lg">
                 {coachInfo.bio}
               </p>
-              <div className="space-y-3">
-                {coachInfo.credentials.map((cred, index) =>
-                <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#A8B88A] flex-shrink-0" />
-                    <span className="text-[#6B5B4A]">{cred}</span>
-                  </div>
-                )}
-              </div>
             </div>
             <div className="order-1 md:order-2">
               <div className="relative">
