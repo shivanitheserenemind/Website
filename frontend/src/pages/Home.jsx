@@ -203,9 +203,6 @@ export const Home = () => {
                   </CardHeader>
                   <CardContent className="flex flex-col flex-1">
                     <p className="text-[#1F4E48] mb-4 leading-relaxed flex-1">{service.description}</p>
-                    <Button className="w-full bg-[#8FB565] hover:bg-[#729550] text-white transition-colors mt-auto">
-                      Learn More
-                    </Button>
                   </CardContent>
                 </Card>);
 
@@ -427,25 +424,18 @@ export const Home = () => {
         </div>
       </footer>
 
-      {/* Cookie Consent - Hover to Expand */}
-      <div className="fixed bottom-4 right-4 z-50 group">
-        {/* Collapsed Icon */}
-        <div className="w-14 h-14 bg-[#2D7A6F] rounded-full shadow-lg flex items-center justify-center cursor-pointer group-hover:opacity-0 group-hover:scale-50 transition-all duration-300 animate-bounce-slow">
-          <Cookie className="h-7 w-7 text-white" />
-        </div>
-        {/* Expanded Popup */}
-        <div className="absolute bottom-0 right-0 max-w-sm w-[22rem] bg-white border border-[#DCE5D0] rounded-lg shadow-2xl p-4 opacity-0 scale-90 pointer-events-none group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto transition-all duration-300 origin-bottom-right">
-          <p className="text-[#1F4E48] text-sm mb-3">
-            We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
-          </p>
-          <div className="flex gap-2">
-            <Button size="sm" className="flex-1 bg-[#8FB565] hover:bg-[#729550] text-white">
-              Accept
-            </Button>
-            <Button size="sm" variant="outline" className="flex-1 border-[#DCE5D0] text-[#1F4E48]">
-              Decline
-            </Button>
-          </div>
+      {/* Cookie Consent Banner */}
+      <div className="fixed bottom-4 right-4 max-w-sm bg-white border border-[#DCE5D0] rounded-lg shadow-lg p-4 z-50">
+        <p className="text-[#1F4E48] text-sm mb-3">
+          We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
+        </p>
+        <div className="flex gap-2">
+          <Button size="sm" className="flex-1 bg-[#8FB565] hover:bg-[#729550] text-white">
+            Accept
+          </Button>
+          <Button size="sm" variant="outline" className="flex-1 border-[#DCE5D0] text-[#1F4E48]">
+            Decline
+          </Button>
         </div>
       </div>
     </div>);
