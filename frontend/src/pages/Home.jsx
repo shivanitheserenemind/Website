@@ -327,9 +327,7 @@ export const Home = () => {
 
                       <option value="">Select Session Type</option>
                       <option value="discovery">Discovery Call</option>
-                      <option value="1on1">1:1 Coaching</option>
                       <option value="workshop">Workshop Inquiry</option>
-                      <option value="group">Group Program</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -361,7 +359,7 @@ export const Home = () => {
             <div>
               <h3 className="font-serif text-2xl mb-4">Shivani Ambekar</h3>
               <p className="text-[#B5C7B0] text-sm leading-relaxed">
-                Licensed Heal Your Life® Coach & Workshop Facilitator
+                team@theserenemind.com
               </p>
             </div>
             <div>
