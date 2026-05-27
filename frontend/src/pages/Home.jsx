@@ -45,15 +45,20 @@ export const Home = () => {
   const [selectedWorkshop, setSelectedWorkshop] = useState(null);
   const [registerForm, setRegisterForm] = useState({ name: '', email: '', message: '', sessionType: '' });
 
-  const handleContactSubmit = (e) => {
+  const handleContactSubmit = async (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`New Inquiry from ${contactForm.name} - ${contactForm.sessionType || 'General'}`);
-    const body = encodeURIComponent(
-      `Name: ${contactForm.name}\nEmail: ${contactForm.email}\nSession Type: ${contactForm.sessionType}\n\nMessage:\n${contactForm.message}`
-    );
-    window.location.href = `mailto:team@theserenemind.com?subject=${subject}&body=${body}`;
-    toast.success('Opening your email client to send the message.');
-    setContactForm({ name: '', email: '', message: '', sessionType: '' });
+    try {
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(contactForm),
+      });
+      if (!res.ok) throw new Error('Failed to send');
+      toast.success("Thank you! Your message has been sent. I'll be in touch soon.");
+      setContactForm({ name: '', email: '', message: '', sessionType: '' });
+    } catch (err) {
+      toast.error('Failed to send message. Please try again or email us directly.');
+    }
   };
 
   const handleNewsletterSubmit = (e) => {
@@ -77,16 +82,26 @@ export const Home = () => {
     }
   };
 
-  const handleRegisterSubmit = (e) => {
+  const handleRegisterSubmit = async (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Workshop Registration: ${selectedWorkshop?.title || 'Workshop'}`);
-    const body = encodeURIComponent(
-      `Workshop: ${selectedWorkshop?.title}\nDate: ${selectedWorkshop?.date}\nLocation: ${selectedWorkshop?.location}\n\nName: ${registerForm.name}\nEmail: ${registerForm.email}\nSession Type: ${registerForm.sessionType}\n\nMessage:\n${registerForm.message}`
-    );
-    window.location.href = `mailto:team@theserenemind.com?subject=${subject}&body=${body}`;
-    toast.success('Opening your email client to confirm registration.');
-    setRegisterForm({ name: '', email: '', message: '', sessionType: '' });
-    setRegisterDialogOpen(false);
+    try {
+      const res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/register`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...registerForm,
+          workshopTitle: selectedWorkshop?.title || '',
+          workshopDate: selectedWorkshop?.date || '',
+          workshopLocation: selectedWorkshop?.location || '',
+        }),
+      });
+      if (!res.ok) throw new Error('Failed to register');
+      toast.success(`Registration sent for ${selectedWorkshop?.title}!`);
+      setRegisterForm({ name: '', email: '', message: '', sessionType: '' });
+      setRegisterDialogOpen(false);
+    } catch (err) {
+      toast.error('Failed to send registration. Please try again.');
+    }
   };
 
   const scrollToContact = () => {
@@ -511,7 +526,7 @@ export const Home = () => {
               className="border-[#DCE5D0] resize-none"
             />
             <Button type="submit" className="w-full bg-[#2D7A6F] hover:bg-[#1F5C54] text-white">
-              Send Message
+              Register Now
               <Send className="ml-2 h-4 w-4" />
             </Button>
           </form>
