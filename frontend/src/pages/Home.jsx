@@ -5,6 +5,7 @@ import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion';
 import { Badge } from '../components/ui/badge';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '../components/ui/dialog';
 import {
   Phone, Map, Sparkles, User, Users, Heart, BookOpen,
   Star, Calendar, MapPin, Clock, Instagram, Facebook,
@@ -39,10 +40,19 @@ export const Home = () => {
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [leadMagnetEmail, setLeadMagnetEmail] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [cookieVisible, setCookieVisible] = useState(true);
+  const [registerDialogOpen, setRegisterDialogOpen] = useState(false);
+  const [selectedWorkshop, setSelectedWorkshop] = useState(null);
+  const [registerForm, setRegisterForm] = useState({ name: '', email: '', message: '', sessionType: '' });
 
   const handleContactSubmit = (e) => {
     e.preventDefault();
-    toast.success('Thank you! Your message has been sent. I\'ll be in touch soon.');
+    const subject = encodeURIComponent(`New Inquiry from ${contactForm.name} - ${contactForm.sessionType || 'General'}`);
+    const body = encodeURIComponent(
+      `Name: ${contactForm.name}\nEmail: ${contactForm.email}\nSession Type: ${contactForm.sessionType}\n\nMessage:\n${contactForm.message}`
+    );
+    window.location.href = `mailto:team@theserenemind.com?subject=${subject}&body=${body}`;
+    toast.success('Opening your email client to send the message.');
     setContactForm({ name: '', email: '', message: '', sessionType: '' });
   };
 
@@ -62,8 +72,21 @@ export const Home = () => {
     if (workshop.status === 'Waitlist') {
       toast.success(`You've been added to the waitlist for ${workshop.title}`);
     } else {
-      toast.success(`Registration confirmed for ${workshop.title}!`);
+      setSelectedWorkshop(workshop);
+      setRegisterDialogOpen(true);
     }
+  };
+
+  const handleRegisterSubmit = (e) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(`Workshop Registration: ${selectedWorkshop?.title || 'Workshop'}`);
+    const body = encodeURIComponent(
+      `Workshop: ${selectedWorkshop?.title}\nDate: ${selectedWorkshop?.date}\nLocation: ${selectedWorkshop?.location}\n\nName: ${registerForm.name}\nEmail: ${registerForm.email}\nSession Type: ${registerForm.sessionType}\n\nMessage:\n${registerForm.message}`
+    );
+    window.location.href = `mailto:team@theserenemind.com?subject=${subject}&body=${body}`;
+    toast.success('Opening your email client to confirm registration.');
+    setRegisterForm({ name: '', email: '', message: '', sessionType: '' });
+    setRegisterDialogOpen(false);
   };
 
   const scrollToContact = () => {
@@ -425,19 +448,75 @@ export const Home = () => {
       </footer>
 
       {/* Cookie Consent Banner */}
-      <div className="fixed bottom-4 right-4 max-w-sm bg-white border border-[#DCE5D0] rounded-lg shadow-lg p-4 z-50">
-        <p className="text-[#1F4E48] text-sm mb-3">
-          We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
-        </p>
-        <div className="flex gap-2">
-          <Button size="sm" className="flex-1 bg-[#8FB565] hover:bg-[#729550] text-white">
-            Accept
-          </Button>
-          <Button size="sm" variant="outline" className="flex-1 border-[#DCE5D0] text-[#1F4E48]">
-            Decline
-          </Button>
+      {cookieVisible && (
+        <div className="fixed bottom-4 right-4 max-w-sm bg-white border border-[#DCE5D0] rounded-lg shadow-lg p-4 z-50">
+          <p className="text-[#1F4E48] text-sm mb-3">
+            We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
+          </p>
+          <div className="flex gap-2">
+            <Button size="sm" onClick={() => setCookieVisible(false)} className="flex-1 bg-[#8FB565] hover:bg-[#729550] text-white">
+              Accept
+            </Button>
+            <Button size="sm" variant="outline" onClick={() => setCookieVisible(false)} className="flex-1 border-[#DCE5D0] text-[#1F4E48]">
+              Decline
+            </Button>
+          </div>
         </div>
-      </div>
+      )}
+
+      {/* Register Now Dialog */}
+      <Dialog open={registerDialogOpen} onOpenChange={setRegisterDialogOpen}>
+        <DialogContent className="max-w-lg bg-white border-[#DCE5D0]">
+          <DialogHeader>
+            <DialogTitle className="text-[#1F4E48] font-serif text-2xl">Register Now</DialogTitle>
+            {selectedWorkshop && (
+              <DialogDescription className="text-[#5A8278]">
+                {selectedWorkshop.title} • {selectedWorkshop.date}
+              </DialogDescription>
+            )}
+          </DialogHeader>
+          <form onSubmit={handleRegisterSubmit} className="space-y-4">
+            <Input
+              placeholder="Your Name"
+              value={registerForm.name}
+              onChange={(e) => setRegisterForm({...registerForm, name: e.target.value})}
+              required
+              className="border-[#DCE5D0]"
+            />
+            <Input
+              type="email"
+              placeholder="Your Email"
+              value={registerForm.email}
+              onChange={(e) => setRegisterForm({...registerForm, email: e.target.value})}
+              required
+              className="border-[#DCE5D0]"
+            />
+            <select
+              value={registerForm.sessionType}
+              onChange={(e) => setRegisterForm({...registerForm, sessionType: e.target.value})}
+              required
+              className="w-full px-3 py-2 border border-[#DCE5D0] rounded-md text-[#1F4E48] bg-white"
+            >
+              <option value="">Select Session Type</option>
+              <option value="discovery">Discovery Call</option>
+              <option value="workshop">Workshop Inquiry</option>
+              <option value="other">Other</option>
+            </select>
+            <Textarea
+              placeholder="Tell me a bit about what brings you here..."
+              value={registerForm.message}
+              onChange={(e) => setRegisterForm({...registerForm, message: e.target.value})}
+              required
+              rows={4}
+              className="border-[#DCE5D0] resize-none"
+            />
+            <Button type="submit" className="w-full bg-[#2D7A6F] hover:bg-[#1F5C54] text-white">
+              Send Message
+              <Send className="ml-2 h-4 w-4" />
+            </Button>
+          </form>
+        </DialogContent>
+      </Dialog>
     </div>);
 
 };
