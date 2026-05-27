@@ -450,10 +450,10 @@ export const Home = () => {
                 <a href="https://www.instagram.com/shivanii.serenemind?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" className="text-[#B5C7B0] hover:text-white transition-colors">
                   <Instagram className="h-7 w-7" />
                 </a>
-                <a href="#" className="text-[#B5C7B0] hover:text-white transition-colors">
+                <a href="https://www.facebook.com/ambekarshivani/" target="_blank" rel="noopener noreferrer" className="text-[#B5C7B0] hover:text-white transition-colors">
                   <Facebook className="h-7 w-7" />
                 </a>
-                <a href="#" className="text-[#B5C7B0] hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/in/shivani-ambekar-639b97155/" target="_blank" rel="noopener noreferrer" className="text-[#B5C7B0] hover:text-white transition-colors">
                   <Linkedin className="h-7 w-7" />
                 </a>
               </div>

@@ -24,7 +24,7 @@ export const services = [
   {
     id: 1,
     title: "Individual Sessions",
-    description: "One on one coaching and counselling sessions, both, in person and online.",
+    description: "One on one counselling sessions, both, in person and online.",
     duration: "60 minutes",
     format: "In-person or Virtual",
     image: "https://images.pexels.com/photos/9065264/pexels-photo-9065264.jpeg",
